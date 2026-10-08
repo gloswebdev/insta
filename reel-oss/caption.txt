@@ -1,0 +1,18 @@
+Apne laptop pe khud ka AI chalao, bilkul FREE 🤯
+
+Ollama ek open-source tool hai (MIT license). Isse Gemma jaise AI models aapke Mac/Windows/Linux pe offline chalte hain.
+
+✅ 100% private: data aapke PC se bahar nahi jata
+✅ Internet ke bina chalta hai
+✅ Claude Code, Codex jaise coding agents se connect hota hai
+
+Install:
+curl -fsSL https://ollama.com/install.sh | sh
+ollama run gemma4
+
+🔗 github.com/ollama/ollama
+
+Save karo, weekend pe try karo 🔖
+Follow @sagar_khandaar for more open-source gems
+
+#opensource #ollama #ai #localai #github #developer #coding #programming #llm #techreels

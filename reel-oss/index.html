@@ -1,0 +1,73 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Ollama Reel</title>
+<style>
+@font-face{font-family:D;src:url(display.ttf)}
+@font-face{font-family:U;src:url(ui.ttf)}
+html,body{margin:0;background:#000}canvas{display:block}
+</style></head><body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script>
+// Ollama reel, 15s, 9:16. Pure function of time: seek(t) paints frame t.
+const W=1080,H=1920,cv=document.getElementById('c'),x=cv.getContext('2d');
+const C={bg:'#0B0B0F',ink:'#F4F4F2',dim:'#8A8A93',acc:'#7CF29A',card:'#17171F'};
+const cl=(v,a=0,b=1)=>Math.min(b,Math.max(a,v)),p=(t,a,b)=>cl((t-a)/(b-a));
+const oc=t=>1-(1-t)**3,ob=t=>{const s=1.7;return 1+(s+1)*(t-1)**3+s*(t-1)**2};
+function T(s,X,Y,sz,c,f='D',al='left',a=1){x.globalAlpha=a;x.fillStyle=c;x.font=`${sz}px ${f}`;x.textAlign=al;x.fillText(s,X,Y);x.globalAlpha=1}
+function rr(X,Y,w,h,r){x.beginPath();x.roundRect(X,Y,w,h,r)}
+function bg(t){x.fillStyle=C.bg;x.fillRect(0,0,W,H);
+  // slow drifting grid
+  x.strokeStyle='rgba(255,255,255,0.04)';x.lineWidth=2;const o=(t*40)%120;
+  for(let i=-1;i<10;i++){x.beginPath();x.moveTo(i*120+o,0);x.lineTo(i*120+o,H);x.stroke()}
+  for(let j=-1;j<17;j++){x.beginPath();x.moveTo(0,j*120+o);x.lineTo(W,j*120+o);x.stroke()}}
+function out(t,a){return 1-p(t,a-0.25,a)}  // fade out ending at a
+
+function s1(t){ // hook 0-3
+  const L=['Apna khud ka','ChatGPT jaisa AI,','laptop pe.','FREE.'];
+  L.forEach((s,i)=>{const k=ob(p(t,0.1+i*0.35,0.6+i*0.35));if(k<=0)return;
+    T(s,90,620+i*150+(i==3?90:0)+(1-k)*80,i==3?190:110,i==3?C.acc:C.ink,'D','left',cl(k)*out(t,3))});
+  T('Internet bhi nahi chahiye.',90,1360,52,C.dim,'U','left',p(t,1.9,2.3)*out(t,3));
+}
+function s2(t){ // reveal 3-6
+  const k=ob(p(t,3,3.5)),a=out(t,6);
+  T('Open source',W/2,620,56,C.dim,'U','center',cl(k)*a);
+  x.save();x.translate(W/2,860);x.scale(0.6+0.4*k,0.6+0.4*k);T('ollama',0,0,240,C.ink,'D','center',cl(k)*a);x.restore();
+  const tags=['MIT License','Mac / Win / Linux','Go'];
+  tags.forEach((s,i)=>{const q=oc(p(t,3.8+i*0.2,4.2+i*0.2));if(q<=0)return;x.globalAlpha=q*a;
+    x.font='46px U';const w=x.measureText(s).width+70,X=W/2-w/2,Y=1000+i*110+(1-q)*40;
+    rr(X,Y,w,80,40);x.fillStyle=C.card;x.fill();x.strokeStyle=C.acc;x.lineWidth=2;x.stroke();x.globalAlpha=1;
+    T(s,W/2,Y+55,46,C.ink,'U','center',q*a)});
+  T('github.com/ollama/ollama',W/2,1460,44,C.acc,'U','center',p(t,4.6,5)*a);
+}
+function typed(s,t,a,cps=28){return s.slice(0,Math.floor(cl((t-a)*cps,0,s.length)))}
+function s3(t){ // terminal 6-10
+  const k=oc(p(t,6,6.4)),a=out(t,10);x.globalAlpha=a;
+  T('Sirf 2 command:',90,520,84,C.ink,'D','left',k*a);
+  const X=70,Y=600+(1-k)*120,w=W-140,h=640;
+  rr(X,Y,w,h,32);x.fillStyle=C.card;x.fill();
+  ['#FF5F57','#FEBC2E','#28C840'].forEach((c,i)=>{x.beginPath();x.arc(X+50+i*44,Y+48,13,0,7);x.fillStyle=c;x.fill()});
+  const F='DejaVu Sans Mono';
+  const l1='curl -fsSL ollama.com/install.sh | sh',l2='ollama run gemma4';
+  T('$ '+typed(l1,t,6.5),X+40,Y+160,34,C.ink,F,'left',a);
+  if(t>8)T('>>> installed',X+40,Y+220,34,C.dim,F,'left',a);
+  if(t>8.2)T('$ '+typed(l2,t,8.3,20),X+40,Y+320,34,C.ink,F,'left',a);
+  if(t>9.3){T('>>> Namaste! Main kya',X+40,Y+400,34,C.acc,F,'left',a);T('    madad karu?',X+40,Y+450,34,C.acc,F,'left',a)}
+  if(Math.floor(t*2)%2==0&&t<9.3)x.fillRect(X+40,Y+520,20,36);
+  x.globalAlpha=1;
+}
+function s4(t){ // benefits 10-13
+  const a=out(t,13);T('Kyun use karein?',90,520,84,C.ink,'D','left',oc(p(t,10,10.4))*a);
+  const B=[['100% Private','Data aapke PC se bahar nahi jata'],['Offline chalta hai','Bina internet ke AI'],['Coding agents','Claude Code, Codex se connect']];
+  B.forEach(([h,s],i)=>{const q=ob(p(t,10.3+i*0.35,10.8+i*0.35));if(q<=0)return;const Y=620+i*260;x.globalAlpha=cl(q)*a;
+    rr(90-(1-q)*200,Y,W-180,220,28);x.fillStyle=C.card;x.fill();x.fillStyle=C.acc;x.fillRect(90-(1-q)*200,Y+40,10,140);x.globalAlpha=1;
+    T(h,140-(1-q)*200,Y+100,64,C.ink,'D','left',cl(q)*a);T(s,140-(1-q)*200,Y+165,42,C.dim,'U','left',cl(q)*a)});
+}
+function s5(t){ // CTA 13-15
+  const k=ob(p(t,13,13.5));
+  T('Save karo,',W/2,700+(1-k)*60,120,C.ink,'D','center',cl(k));
+  T('weekend pe try karo.',W/2,840+(1-k)*60,84,C.acc,'D','center',cl(k));
+  T('github.com/ollama/ollama',W/2,1020,48,C.ink,'U','center',p(t,13.5,13.9));
+  T('Follow @sagar_khandaar for more OSS',W/2,1120,42,C.dim,'U','center',p(t,13.8,14.2));
+}
+window.seek=t=>{bg(t);if(t<3)s1(t);else if(t<6)s2(t);else if(t<10)s3(t);else if(t<13)s4(t);else s5(t)};
+document.fonts.load('40px D').then(()=>document.fonts.load('40px U')).then(()=>{seek(0);window.ready=true});
+</script></body></html>
