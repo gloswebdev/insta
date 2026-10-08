@@ -1,0 +1,110 @@
+[
+ {
+  "family": "Outfit",
+  "weight": "400",
+  "style": "normal",
+  "subset": "all",
+  "range": "",
+  "file": "outfit-400-normal-all-0.ttf",
+  "src": "https://fonts.gstatic.com/s/outfit/v15/QGYyz_MVcBeNP4NjuGObqx1XmO1I4TC1C4E.ttf"
+ },
+ {
+  "family": "Outfit",
+  "weight": "500",
+  "style": "normal",
+  "subset": "all",
+  "range": "",
+  "file": "outfit-500-normal-all-1.ttf",
+  "src": "https://fonts.gstatic.com/s/outfit/v15/QGYyz_MVcBeNP4NjuGObqx1XmO1I4QK1C4E.ttf"
+ },
+ {
+  "family": "Outfit",
+  "weight": "600",
+  "style": "normal",
+  "subset": "all",
+  "range": "",
+  "file": "outfit-600-normal-all-2.ttf",
+  "src": "https://fonts.gstatic.com/s/outfit/v15/QGYyz_MVcBeNP4NjuGObqx1XmO1I4e6yC4E.ttf"
+ },
+ {
+  "family": "Outfit",
+  "weight": "700",
+  "style": "normal",
+  "subset": "all",
+  "range": "",
+  "file": "outfit-700-normal-all-3.ttf",
+  "src": "https://fonts.gstatic.com/s/outfit/v15/QGYyz_MVcBeNP4NjuGObqx1XmO1I4deyC4E.ttf"
+ },
+ {
+  "family": "Outfit",
+  "weight": "800",
+  "style": "normal",
+  "subset": "all",
+  "range": "",
+  "file": "outfit-800-normal-all-4.ttf",
+  "src": "https://fonts.gstatic.com/s/outfit/v15/QGYyz_MVcBeNP4NjuGObqx1XmO1I4bCyC4E.ttf"
+ },
+ {
+  "family": "Outfit",
+  "weight": "900",
+  "style": "normal",
+  "subset": "all",
+  "range": "",
+  "file": "outfit-900-normal-all-5.ttf",
+  "src": "https://fonts.gstatic.com/s/outfit/v15/QGYyz_MVcBeNP4NjuGObqx1XmO1I4ZmyC4E.ttf"
+ },
+ {
+  "family": "Plus Jakarta Sans",
+  "weight": "400",
+  "style": "italic",
+  "subset": "all",
+  "range": "",
+  "file": "plus-jakarta-sans-400-italic-all-6.ttf",
+  "src": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIZaomQNQcsA88c7O9yZ4KMCoOg4KozySKCdSNG9OcqYQ0lCR_Q.ttf"
+ },
+ {
+  "family": "Plus Jakarta Sans",
+  "weight": "400",
+  "style": "normal",
+  "subset": "all",
+  "range": "",
+  "file": "plus-jakarta-sans-400-normal-all-7.ttf",
+  "src": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU7NSg.ttf"
+ },
+ {
+  "family": "Plus Jakarta Sans",
+  "weight": "500",
+  "style": "normal",
+  "subset": "all",
+  "range": "",
+  "file": "plus-jakarta-sans-500-normal-all-8.ttf",
+  "src": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_m07NSg.ttf"
+ },
+ {
+  "family": "Plus Jakarta Sans",
+  "weight": "600",
+  "style": "normal",
+  "subset": "all",
+  "range": "",
+  "file": "plus-jakarta-sans-600-normal-all-9.ttf",
+  "src": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_d0nNSg.ttf"
+ },
+ {
+  "family": "Plus Jakarta Sans",
+  "weight": "700",
+  "style": "normal",
+  "subset": "all",
+  "range": "",
+  "file": "plus-jakarta-sans-700-normal-all-10.ttf",
+  "src": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_TknNSg.ttf"
+ },
+ {
+  "family": "Plus Jakarta Sans",
+  "weight": "800",
+  "style": "normal",
+  "subset": "all",
+  "range": "",
+  "file": "plus-jakarta-sans-800-normal-all-11.ttf",
+  "src": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_KUnNSg.ttf"
+ }
+]

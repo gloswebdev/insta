@@ -1,0 +1,169 @@
+{
+ "url": "https://aireminder.sagarkhandar.in/",
+ "title": "Remi AI — Intelligent Remi Vision (Live Camera AI), Voice AI & Phone Call Reminder",
+ "description": "Remi AI is your personal reminder companion. Features live Remi Vision (Live Camera AI), natural Hindi/Hinglish Speech-to-Speech AI, real SIM incoming phone calls, and trusted contact reminders. Powered by Gloswebdev & Sagar Khandar.",
+ "themeColor": [],
+ "text_colors": [
+  [
+   "#0f172a",
+   57
+  ],
+  [
+   "#475569",
+   45
+  ],
+  [
+   "#64748b",
+   40
+  ],
+  [
+   "#1e293b",
+   19
+  ],
+  [
+   "#4f46e5",
+   13
+  ],
+  [
+   "#ffffff",
+   13
+  ],
+  [
+   "#0284c7",
+   10
+  ],
+  [
+   "#059669",
+   9
+  ],
+  [
+   "#e11d48",
+   4
+  ],
+  [
+   "#4338ca",
+   3
+  ]
+ ],
+ "background_colors": [
+  [
+   "#ffffff",
+   256
+  ],
+  [
+   "#f8fafc",
+   56
+  ],
+  [
+   "#f1f5f9",
+   19
+  ],
+  [
+   "#eef2ff",
+   9
+  ],
+  [
+   "#ecfdf5",
+   6
+  ],
+  [
+   "#f0f9ff",
+   5
+  ],
+  [
+   "#fef3c7",
+   1
+  ],
+  [
+   "#e0f2fe",
+   0
+  ],
+  [
+   "#ffe4e6",
+   0
+  ],
+  [
+   "#dcfce7",
+   0
+  ]
+ ],
+ "font_families": [
+  [
+   "Plus Jakarta Sans",
+   196
+  ],
+  [
+   "Outfit",
+   32
+  ]
+ ],
+ "font_weights": [
+  [
+   "Plus Jakarta Sans 400",
+   68
+  ],
+  [
+   "Plus Jakarta Sans 700",
+   54
+  ],
+  [
+   "Plus Jakarta Sans 800",
+   43
+  ],
+  [
+   "Plus Jakarta Sans 600",
+   17
+  ],
+  [
+   "Outfit 800",
+   17
+  ],
+  [
+   "Plus Jakarta Sans 900",
+   14
+  ],
+  [
+   "Outfit 900",
+   11
+  ],
+  [
+   "Outfit 700",
+   4
+  ]
+ ],
+ "css_vars": {
+  "--bg-base": "#F8FAFC",
+  "--bg-surface": "#FFFFFF",
+  "--bg-card": "#FFFFFF",
+  "--bg-card-subtle": "#F1F5F9",
+  "--border-subtle": "#E2E8F0",
+  "--border-glow": "rgba(99, 102, 241, 0.25)",
+  "--border-cyan": "rgba(2, 132, 199, 0.25)",
+  "--primary": "#4F46E5",
+  "--primary-light": "#6366F1",
+  "--primary-soft": "#EEF2FF",
+  "--primary-glow": "rgba(79, 70, 229, 0.2)",
+  "--purple": "#7C3AED",
+  "--purple-soft": "#FAF5FF",
+  "--cyan": "#0284C7",
+  "--cyan-soft": "#F0F9FF",
+  "--emerald": "#059669",
+  "--emerald-soft": "#ECFDF5",
+  "--rose": "#E11D48",
+  "--rose-soft": "#FFF1F2",
+  "--amber": "#D97706",
+  "--amber-soft": "#FFFBEB",
+  "--text-title": "#0F172A",
+  "--text-heading": "#1E293B",
+  "--text-body": "#475569",
+  "--text-muted": "#64748B",
+  "--text-light": "#94A3B8"
+ },
+ "wordmark": {
+  "text": "Remi\nv1.0.18",
+  "font": "\"Plus Jakarta Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+  "weight": "400",
+  "tracking": "normal",
+  "html": "\n                <img src=\"/images/remi-logo.png\" alt=\"Remi AI Logo\" class=\"brand-logo-img\">\n                <div class=\"brand-text\">\n                    Remi <span class=\"brand-ver-badge\">v1.0.18</span>\n                </div>\n            "
+ }
+}
